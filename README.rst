@@ -3,7 +3,7 @@
 mosquitto
 ==================================
 
-Service mosquitto description
+Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model.
 
 Sample pillars
 ==============
@@ -15,9 +15,8 @@ Single mosquitto service
     mosquitto:
       server:
         enabled: true
-        version: icehouse
 
 Read more
 =========
 
-* links
+* http://mosquitto.org/

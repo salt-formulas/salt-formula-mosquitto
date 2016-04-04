@@ -2,11 +2,11 @@
 # Fill in documentation details
 doc:
   name: mosquitto
-  description: Some service info
+  description: Message broker that implements the MQTT protocol.
   role:
     server:
       name: server
       param:
-        some_param:
-          name: "Some name"
-          value: "some value"
+        bind:
+          name: "Network bind"
+          value: {{ server.bind.host }}:{{ server.bind.port }}
