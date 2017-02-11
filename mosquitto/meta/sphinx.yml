@@ -9,4 +9,4 @@ doc:
       param:
         bind:
           name: "Network bind"
-          value: {{ server.bind.host }}:{{ server.bind.port }}
+          value: {{ server.bind.address }}:{{ server.bind.port }}

@@ -1,7 +1,7 @@
 
-==================================
-mosquitto
-==================================
+=================
+mosquitto formula
+=================
 
 Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model.
 
@@ -16,8 +16,8 @@ Single mosquitto service
       server:
         enabled: true
 
-Read more
-=========
+External links
+==============
 
 * http://mosquitto.org/
 
