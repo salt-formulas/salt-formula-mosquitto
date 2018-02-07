@@ -1,0 +1,3 @@
+mosquitto:
+  server:
+    enabled: true

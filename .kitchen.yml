@@ -1,0 +1,49 @@
+---
+driver:
+  name: docker
+  hostname: mosquitto.ci.local
+  #socket: tcp://127.0.0.1:2376
+  use_sudo: false
+
+
+
+provisioner:
+  name: salt_solo
+  salt_install: bootstrap
+  salt_bootstrap_url: https://bootstrap.saltstack.com
+  salt_version: latest
+  require_chef: false
+  formula: mosquitto
+  log_level: info
+  state_top:
+    base:
+      "*":
+        - mosquitto
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - mosquitto
+  grains:
+    noservices: True
+
+
+platforms:
+  - name: ubuntu-14.04
+  - name: ubuntu-16.04
+  - name: centos-7.1
+
+
+verifier:
+  name: inspec
+  sudo: true
+
+
+suites:
+
+  - name: server_single
+    provisioner:
+      pillars-from-files:
+        mosquitto.sls: tests/pillar/server_single.sls
+
+# vim: ft=yaml sw=2 ts=2 sts=2 tw=125
